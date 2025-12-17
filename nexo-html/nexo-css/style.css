@@ -1,0 +1,400 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =========================
+   RESET GLOBAL
+   ========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+h1 h2 h3{
+    font-family: "Poppins", sans-serif;;
+}
+body{
+    background-color: #FEFEF7;
+    color: #333333;
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =========================
+   BARRE DE CONNEXION
+   ========================= */
+
+#login-bar {
+    width: 100%;
+    background-color: #333333;
+    color: #FEFEF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-weight: bold;
+}
+
+#login-bar .login-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#login-bar button {
+    background-color: #FEFEF7;
+    color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#login-bar button:hover {
+    background-color: #555;
+    color: #FEFEF7;
+}
+
+#login-bar #close-login-bar {
+    background-color: transparent;
+    color: #FEFEF7;
+    font-size: 1.5rem;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#login-bar #close-login-bar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FEFEF7;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #FEFEF7;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo{
+    font-weight: bolder;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.logo:hover{
+    text-decoration: underline;
+}
+
+.logo-div{
+    width: 30%;
+}
+
+
+/* =========================
+   MENU DE NAVIGATION
+   ========================= */
+
+ul{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    list-style: none;
+}
+
+ul li{
+    padding: 10px 25px; 
+    white-space: nowrap;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #333333;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+ul li a:hover{
+    background-color: #333333;
+    padding: 15px;
+    color: #FEFEF7;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+
+/* =========================
+   BOUTON CONNEXION
+   ========================= */
+
+.btn-header{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    color: #FEFEF7;
+    background-color: #333333;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: #333333;
+    transform: rotate(5deg);
+    border: 2px solid #333333;
+}
+
+
+/* =========================
+   BURGER MENU
+   ========================= */
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLETTE
+   ========================= */
+
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo-div {
+        width: 25%;
+    }
+
+    ul {
+        width: 50%;
+    }
+
+    ul li {
+        padding: 10px 15px;
+    }
+
+    ul li a {
+        font-size: 0.95rem;
+    }
+
+    .btn-header {
+        width: 25%;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - TABLETTE SMALL
+   ========================= */
+
+@media (max-width: 900px) {
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    ul li {
+        padding: 8px 12px;
+    }
+
+    ul li a {
+        font-size: 0.9rem;
+    }
+
+    ul li a:hover {
+        padding: 12px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+    #login-bar {
+        padding: 8px 4%;
+        font-size: 0.9rem;
+    }
+
+    #login-bar button {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo-div {
+        width: auto;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #FEFEF7;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    ul li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    ul li:last-child {
+        border-bottom: none;
+    }
+
+    ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    ul li a:hover {
+        background-color: #333333;
+        color: #FEFEF7;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    ul.active {
+        display: flex;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE SMALL
+   ========================= */
+
+@media (max-width: 480px) {
+    #login-bar {
+        padding: 6px 3%;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    #login-bar button {
+        padding: 3px 6px;
+        font-size: 0.75rem;
+        margin-left: 5px;
+    }
+
+    header {
+        padding: 12px 4%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .burger {
+        font-size: 1.75rem;
+    }
+
+    ul {
+        top: 55px;
+    }
+
+    ul li {
+        padding: 12px 0;
+    }
+
+    ul li a {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - TRÈS GRAND ÉCRAN
+   ========================= */
+
+@media (min-width: 1400px) {
+    header {
+        padding: 25px 10%;
+    }
+
+    .logo {
+        font-size: 2.25rem;
+    }
+
+    ul li {
+        padding: 12px 30px;
+    }
+
+    ul li a {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1.05rem;
+    }
+}
